@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aman's Kitchen - Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <img src="https://i.pinimg.com/736x/37/e9/b0/37e9b03863526807fee0d0885217e0c8.jpg" alt="logo" class="logo">
+      <div class="brand-text">
+        <h1><b>Aman's Kitchen</b></h1>
+        <small>Fresh • Fast</small>
+      </div>
+    </div>
+    <div>
+      <button id="cartToggle" class="cart-btn">Cart (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2 class="section-title">Menu</h2>
+
+    <section id="menu" class="grid">
+      <!-- 6 dishes -->
+      <article class="card" data-name="Margherita Pizza" data-price="250">
+        <div class="thumb"><img src="https://i.pinimg.com/736x/22/c3/07/22c3076bf300f7cb3a9df261688e4348.jpg" alt="Margherita Pizza"></div>
+        <h3>Margherita Pizza</h3>
+        <p class="desc">Tomato sauce, mozzarella, basil</p>
+        <div class="card-bottom">
+          <strong>₹250</strong>
+          <button class="add" onclick="add(this)">Add</button>
+        </div>
+      </article>
+
+      <article class="card" data-name="Veg Burger" data-price="120">
+        <div class="thumb"><img src="https://i.pinimg.com/736x/e0/28/38/e02838f300641fa6354c6ad4158b0be9.jpg" alt="Veg Burger"></div>
+        <h3>Veg Burger</h3>
+        <p class="desc">Crispy patty, lettuce, sauce</p>
+        <div class="card-bottom">
+          <strong>₹120</strong>
+          <button class="add" onclick="add(this)">Add</button>
+        </div>
+      </article>
+
+      <article class="card" data-name="Pasta Alfredo" data-price="200">
+        <div class="thumb"><img src="https://i.pinimg.com/736x/9d/eb/fd/9debfda8f4d6a8c2457c143e98031ec6.jpg" alt="Pasta Alfredo"></div>
+        <h3>Pasta Alfredo</h3>
+        <p class="desc">Creamy garlic parmesan</p>
+        <div class="card-bottom">
+          <strong>₹200</strong>
+          <button class="add" onclick="add(this)">Add</button>
+        </div>
+      </article>
+
+      <article class="card" data-name="Paneer Tikka" data-price="180">
+        <div class="thumb"><img src="https://i.pinimg.com/736x/59/81/85/5981859da80c1d8580654daf371d0ffe.jpg" alt="Paneer Tikka"></div>
+        <h3>Paneer Tikka</h3>
+        <p class="desc">Smoky marinated paneer</p>
+        <div class="card-bottom">
+          <strong>₹180</strong>
+          <button class="add" onclick="add(this)">Add</button>
+        </div>
+      </article>
+
+      <article class="card" data-name="French Fries" data-price="80">
+        <div class="thumb"><img src="https://i.pinimg.com/1200x/a7/e9/49/a7e949836929634da1a56366b4386713.jpg" alt="French Fries"></div>
+        <h3>French Fries</h3>
+        <p class="desc">Crispy salted fries</p>
+        <div class="card-bottom">
+          <strong>₹80</strong>
+          <button class="add" onclick="add(this)">Add</button>
+        </div>
+      </article>
+
+      <article class="card" data-name="Chocolate Brownie" data-price="150">
+        <div class="thumb"><img src="https://i.pinimg.com/736x/11/c0/b6/11c0b61369d9d68b94dc2722cffd0365.jpg" alt="Chocolate Brownie"></div>
+        <h3>Chocolate Brownie</h3>
+        <p class="desc">Warm fudgy brownie</p>
+        <div class="card-bottom">
+          <strong>₹150</strong>
+          <button class="add" onclick="add(this)">Add</button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- cart aside -->
+  <aside id="cart" class="cart">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button id="closeCart">✕</button>
+    </div>
+    <ul id="list" class="cart-list"></ul>
+    <div class="cart-foot">
+      <div>Total: ₹<span id="total">0</span></div>
+      <div class="cart-actions">
+        <button onclick="placeOrder()" class="place">Place Order</button>
+        <button onclick="clearCart()" class="muted">Clear</button>
+      </div>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+</html>
